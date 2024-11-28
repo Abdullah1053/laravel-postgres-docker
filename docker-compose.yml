@@ -6,7 +6,7 @@ services:
     image: nginx:alpine
     container_name: nginx
     ports:
-      - "8080:80"
+      - 8080:80
     volumes:
       - ./laravel:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
@@ -21,7 +21,7 @@ services:
     volumes:
       - ./postgresql/data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment: 
       POSTGRES_DB: blog
       POSTGRES_USER: root 
@@ -36,7 +36,7 @@ services:
     volumes:
       - ./laravel:/var/www
     ports:
-      - "9000:9000"
+      - 9000:9000
     working_dir: /var/www
 
  
@@ -44,7 +44,7 @@ services:
     image: dpage/pgadmin4
     container_name: pgAdmin
     ports:
-      - "5050:80"
+      - 5050:80
     depends_on:
       - db 
     environment:
