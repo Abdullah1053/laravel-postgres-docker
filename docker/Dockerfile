@@ -119,7 +119,7 @@ EXPOSE 80
 
 
 # RUN php artisan migrate:fresh 
-# RUN echo "<VirtualHost *:80>
+# RUN echo " DocumentRoot /var/www//public"> /etc/apache2/sites-available/000-default.conf
 #                 DocumentRoot /var/www/public
 #                 <Directory /var/www/public>
 #                     Options Indexes FollowSymLinks
